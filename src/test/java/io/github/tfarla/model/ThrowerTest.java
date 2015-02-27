@@ -1,33 +1,38 @@
 package io.github.tfarla.model;
 
-import junit.framework.TestCase;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.ArrayList;
 
-public class ThrowerTest extends TestCase {
-    public void testThrowMustReturnListOfDices() {
+public class ThrowerTest {
+    @Test
+    public void throwMustReturnListOfDices() {
         assertDicesThrown(0);
     }
 
-    public void testThrowDicesMustReturnAmountSpecified() {
+    @Test
+    public void throwDicesMustReturnAmountSpecified() {
         assertDicesThrown(10);
     }
 
-    public void testThrownDicesSmallestMustBeOne() {
+    @Test
+    public void thrownDicesSmallestMustBeOne() {
         ArrayList<Dice> dices = throwDices(100);
         for (Dice dice : dices)
-            assertTrue(dice.getPipes() >= 1);
+            Assert.assertTrue(dice.getPipes() >= 1);
     }
 
-    public void testThrownDicesBiggestMustBeSix() {
+    @Test
+    public void thrownDicesBiggestMustBeSix() {
         ArrayList<Dice> dices = throwDices(100);
         for (Dice dice : dices)
-            assertTrue(dice.getPipes() <= 6);
+            Assert.assertTrue(dice.getPipes() <= 6);
     }
 
     private void assertDicesThrown(int amount) {
         ArrayList<Dice> dices = throwDices(amount);
-        assertEquals(amount, dices.size());
+        Assert.assertEquals(amount, dices.size());
     }
 
     private ArrayList<Dice> throwDices(int amount) {

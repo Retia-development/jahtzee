@@ -1,12 +1,14 @@
 package io.github.tfarla.model.score;
 
 import io.github.tfarla.model.Dice;
-import junit.framework.TestCase;
+import org.junit.Assert;
+import org.junit.Test;
 
-public class BigStreetTest extends TestCase {
-    public void testGetTotal() {
+public class BigStreetTest {
+    @Test
+    public void getTotal() {
         Dice dices[] = {new Dice(1), new Dice(2), new Dice(3), new Dice(4), new Dice(5)};
         BigStreet score = new BigStreet(dices);
-        assertEquals(Points.BIG_STREET.get(), score.getTotal());
+        Assert.assertEquals(Points.BIG_STREET.get(), score.getTotal());
     }
 }

@@ -1,11 +1,14 @@
 package io.github.tfarla.model;
 
-import junit.framework.TestCase;
 
-public class DiceTest extends TestCase {
-    public void testGetAmountOfPipes() {
+import org.junit.Assert;
+import org.junit.Test;
+
+public class DiceTest {
+    @Test
+    public void getAmountOfPipes() {
         int pipes = 2;
         Dice dice = new Dice(pipes);
-        assertEquals(pipes, dice.getPipes());
+        Assert.assertEquals(pipes, dice.getPipes());
     }
 }
