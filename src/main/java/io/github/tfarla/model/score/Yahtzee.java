@@ -2,13 +2,13 @@ package io.github.tfarla.model.score;
 
 import io.github.tfarla.model.Dice;
 
-public class Yahtzee extends Score {
+public class Yahtzee extends ScoreImpl {
     public Yahtzee(Dice dices[]) {
         super(dices);
     }
 
     @Override
     public int getTotal() {
-        return Score.YAHTZEE;
+        return Points.YAHTZEE.get();
     }
 }

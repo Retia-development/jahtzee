@@ -7,6 +7,6 @@ public class BigStreetTest extends TestCase {
     public void testGetTotal() {
         Dice dices[] = {new Dice(1), new Dice(2), new Dice(3), new Dice(4), new Dice(5)};
         BigStreet score = new BigStreet(dices);
-        assertEquals(Score.BIG_STREET, score.getTotal());
+        assertEquals(Points.BIG_STREET.get(), score.getTotal());
     }
 }

@@ -7,6 +7,6 @@ public class FullHouseTest extends TestCase {
     public void testGetTotal() {
         Dice dices[] = {new Dice(1), new Dice(1), new Dice(1), new Dice(2), new Dice(2)};
         FullHouse score = new FullHouse(dices);
-        assertEquals(Score.FULL_HOUSE, score.getTotal());
+        assertEquals(Points.FULL_HOUSE.get(), score.getTotal());
     }
 }

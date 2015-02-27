@@ -2,15 +2,12 @@ package io.github.tfarla.model.score;
 
 import io.github.tfarla.model.Dice;
 
-public class Score {
-    final static int YAHTZEE = 50;
-    final static int SMALL_STREET = 30;
-    final static int BIG_STREET = 40;
-    final static int FULL_HOUSE = 25;
+public class ScoreImpl {
 
-    private Dice dices[];
 
-    public Score(Dice dices[]) {
+    protected Dice dices[];
+
+    public ScoreImpl(Dice dices[]) {
         this.dices = dices;
     }
 

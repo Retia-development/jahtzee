@@ -2,13 +2,13 @@ package io.github.tfarla.model.score;
 
 import io.github.tfarla.model.Dice;
 
-public class FullHouse extends Score {
+public class FullHouse extends ScoreImpl {
     public FullHouse(Dice dices[]) {
         super(dices);
     }
 
     @Override
     public int getTotal() {
-        return Score.FULL_HOUSE;
+        return Points.FULL_HOUSE.get();
     }
 }
