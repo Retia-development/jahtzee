@@ -2,12 +2,13 @@ package io.github.tfarla.model.score;
 
 import io.github.tfarla.model.Dice;
 
-public class BigStreet extends ScoreImpl {
+public class BigStreet implements Score {
+    private Dice dices[];
+
     public BigStreet(Dice dices[]) {
-        super(dices);
+        this.dices = dices;
     }
 
-    @Override
     public int getTotal() {
         return Points.BIG_STREET.get();
     }

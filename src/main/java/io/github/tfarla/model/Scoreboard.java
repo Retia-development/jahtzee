@@ -1,23 +1,23 @@
 package io.github.tfarla.model;
 
-import io.github.tfarla.model.score.ScoreImpl;
+import io.github.tfarla.model.score.Score;
 
 import java.util.ArrayList;
 
 public class Scoreboard {
-    private ArrayList<ScoreImpl> scores;
+    private ArrayList<Score> scores;
 
-    public Scoreboard(ArrayList<ScoreImpl> scores) {
+    public Scoreboard(ArrayList<Score> scores) {
         this.scores = scores;
     }
 
-    public void add(ScoreImpl score) {
+    public void add(Score score) {
         this.scores.add(score);
     }
 
     public int getTotalPoints() {
         int total = 0;
-        for (ScoreImpl score : scores)
+        for (Score score : scores)
             total += score.getTotal();
 
         return total;

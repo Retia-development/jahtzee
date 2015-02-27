@@ -2,15 +2,15 @@ package io.github.tfarla.model.score;
 
 import io.github.tfarla.model.Dice;
 
-public class SingleNumber extends ScoreImpl {
+public class SingleNumber implements Score {
     private int chosen;
+    private Dice dices[];
 
     public SingleNumber(Dice dices[], int chosen) {
-        super(dices);
+        this.dices = dices;
         this.chosen = chosen;
     }
 
-    @Override
     public int getTotal() {
         int total = 0;
         for (Dice dice : dices)
