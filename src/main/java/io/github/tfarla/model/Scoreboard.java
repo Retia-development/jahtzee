@@ -11,6 +11,10 @@ public class Scoreboard {
         this.scores = scores;
     }
 
+    public void add(Score score) {
+        this.scores.add(score);
+    }
+
     public int getTotalPoints() {
         int total = 0;
         for (Score score : scores)
