@@ -34,8 +34,8 @@ public class ScoreboardTest {
     @Test
     public void getTopTotalPointsWithScore() {
         Scoreboard board = new Scoreboard();
-        Dice dices[] = {new Dice(1), new Dice(1), new Dice(2), new Dice(2), new Dice(3)};
-        SingleNumber score = new SingleNumber(dices, 1);
+        Dice dices[] = {new Dice(1), new Dice(1)};
+        SingleNumber score = new SingleNumber(dices);
         board.add(score);
         Assert.assertEquals(score.getTotal(), board.getTopTotalPoints());
     }
