@@ -2,7 +2,7 @@ package io.github.tfarla.model.score;
 
 import io.github.tfarla.model.Dice;
 
-public class FullHouse implements Score {
+public class FullHouse implements Bottom {
     private Dice dices[];
 
     public FullHouse(Dice dices[]) {

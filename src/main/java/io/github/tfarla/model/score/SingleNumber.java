@@ -2,7 +2,7 @@ package io.github.tfarla.model.score;
 
 import io.github.tfarla.model.Dice;
 
-public class SingleNumber implements Score {
+public class SingleNumber implements Top {
     private int chosen;
     private Dice dices[];
 

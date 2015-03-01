@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class GameTest {
     @Test
     public void getPlayers() {
-        Player player = new Player("A", new Scoreboard(new ArrayList<Score>()));
+        Player player = new Player("A", new Scoreboard());
         Player players[] = {player};
         Game game = new Game(players);
         Assert.assertSame(players, game.getPlayers());
@@ -17,7 +17,7 @@ public class GameTest {
 
     @Test
     public void getActivePlayer() {
-        Player player = new Player("A", new Scoreboard(new ArrayList<Score>()));
+        Player player = new Player("A", new Scoreboard());
         Player players[] = {player};
         Game game = new Game(players);
         Assert.assertSame(player, game.getActivePlayer());
@@ -25,8 +25,8 @@ public class GameTest {
 
     @Test
     public void setNextActivePlayer() {
-        Player first = new Player("A", new Scoreboard(new ArrayList<Score>()));
-        Player second = new Player("B", new Scoreboard(new ArrayList<Score>()));
+        Player first = new Player("A", new Scoreboard());
+        Player second = new Player("B", new Scoreboard());
         Player players[] = {first, second};
         Game game = new Game(players);
         game.setNextPlayerActive();
@@ -35,8 +35,8 @@ public class GameTest {
 
     @Test
     public void setNextActivePlayerMustCycle() {
-        Player first = new Player("A", new Scoreboard(new ArrayList<Score>()));
-        Player second = new Player("B", new Scoreboard(new ArrayList<Score>()));
+        Player first = new Player("A", new Scoreboard());
+        Player second = new Player("B", new Scoreboard());
         Player players[] = {first, second};
         Game game = new Game(players);
         for (int i = 0; i < 2; i++)

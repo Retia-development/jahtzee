@@ -15,7 +15,7 @@ public class PlayerTest {
     @Before
     public void setUp() {
         name = "Foo";
-        board = new Scoreboard(new ArrayList<Score>());
+        board = new Scoreboard();
         player = new Player(name, board);
     }
 

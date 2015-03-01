@@ -2,7 +2,7 @@ package io.github.tfarla.model.score;
 
 import io.github.tfarla.model.Dice;
 
-public class Yahtzee implements Score {
+public class Yahtzee implements Bottom {
     private Dice dices[];
 
     public Yahtzee(Dice dices[]) {
