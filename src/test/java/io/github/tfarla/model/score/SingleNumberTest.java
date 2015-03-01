@@ -18,4 +18,11 @@ public class SingleNumberTest {
         SingleNumber score = new SingleNumber(dices);
         Assert.assertEquals(4, score.getTotal());
     }
+
+    @Test
+    public void isBottom() {
+        Dice dices[] = {};
+        SingleNumber score = new SingleNumber(dices);
+        Assert.assertFalse(score.isBottom());
+    }
 }

@@ -11,4 +11,11 @@ public class FourOfAKindTest {
         FourOfAKind score = new FourOfAKind(dices);
         Assert.assertEquals(6, score.getTotal());
     }
+
+    @Test
+    public void isBottom() {
+        Dice dices[] = {};
+        FourOfAKind score = new FourOfAKind(dices);
+        Assert.assertTrue(score.isBottom());
+    }
 }

@@ -11,4 +11,11 @@ public class SmallStreetTest {
         SmallStreet score = new SmallStreet(dices);
         Assert.assertEquals(Points.SMALL_STREET.get(), score.getTotal());
     }
+
+    @Test
+    public void isBottom() {
+        Dice dices[] = {};
+        SmallStreet score = new SmallStreet(dices);
+        Assert.assertTrue(score.isBottom());
+    }
 }

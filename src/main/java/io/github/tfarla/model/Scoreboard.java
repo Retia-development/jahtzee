@@ -1,26 +1,23 @@
 package io.github.tfarla.model;
 
-import io.github.tfarla.model.score.Bottom;
 import io.github.tfarla.model.score.Score;
-import io.github.tfarla.model.score.Top;
 
 import java.util.ArrayList;
 
 public class Scoreboard {
-    private ArrayList<Top> topScore;
-    private ArrayList<Bottom> bottomScore;
+    private ArrayList<Score> topScore;
+    private ArrayList<Score> bottomScore;
 
     public Scoreboard() {
-        this.topScore = new ArrayList<Top>();
-        this.bottomScore = new ArrayList<Bottom>();
+        this.topScore = new ArrayList<Score>();
+        this.bottomScore = new ArrayList<Score>();
     }
 
-    public void add(Top score) {
-        this.topScore.add(score);
-    }
-
-    public void add(Bottom score) {
-        this.bottomScore.add(score);
+    public void add(Score score) {
+        if (score.isBottom())
+            addScoreToBottom(score);
+        else
+            addScoreToTop(score);
     }
 
     public int getTotalPoints() {
@@ -37,5 +34,13 @@ public class Scoreboard {
             total += score.getTotal();
 
         return total;
+    }
+
+    private void addScoreToTop(Score score) {
+        this.topScore.add(score);
+    }
+
+    private void addScoreToBottom(Score score) {
+        this.bottomScore.add(score);
     }
 }

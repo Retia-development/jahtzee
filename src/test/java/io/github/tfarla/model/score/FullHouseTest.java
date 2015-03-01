@@ -11,4 +11,11 @@ public class FullHouseTest {
         FullHouse score = new FullHouse(dices);
         Assert.assertEquals(Points.FULL_HOUSE.get(), score.getTotal());
     }
+
+    @Test
+    public void isBottom() {
+        Dice dices[] = {};
+        FullHouse score = new FullHouse(dices);
+        Assert.assertTrue(score.isBottom());
+    }
 }

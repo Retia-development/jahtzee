@@ -11,4 +11,11 @@ public class YahtzeeTest {
         Yahtzee score = new Yahtzee(dices);
         Assert.assertEquals(Points.YAHTZEE.get(), score.getTotal());
     }
+
+    @Test
+    public void isBottom() {
+        Dice dices[] = {};
+        Yahtzee score = new Yahtzee(dices);
+        Assert.assertTrue(score.isBottom());
+    }
 }
