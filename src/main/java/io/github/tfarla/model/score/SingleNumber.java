@@ -1,6 +1,7 @@
 package io.github.tfarla.model.score;
 
 import io.github.tfarla.model.Dice;
+import io.github.tfarla.util.Calc;
 
 public class SingleNumber implements Top {
     private Dice dices[];
@@ -10,10 +11,6 @@ public class SingleNumber implements Top {
     }
 
     public int getTotal() {
-        int total = 0;
-        for (Dice dice : dices)
-            total += dice.getPipes();
-
-        return total;
+        return Calc.sum(dices);
     }
 }
