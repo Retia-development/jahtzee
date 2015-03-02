@@ -1,5 +1,7 @@
 package io.github.tfarla.model;
 
+import io.github.tfarla.model.scoreboard.Scoreboard;
+
 public class Player {
     private String name;
     private Scoreboard board;

@@ -1,11 +1,9 @@
 package io.github.tfarla.model;
 
-import io.github.tfarla.model.score.Score;
+import io.github.tfarla.model.scoreboard.Scoreboard;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 public class PlayerTest {
     private String name;
